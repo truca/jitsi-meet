@@ -87,7 +87,6 @@ class SettingsView extends AbstractSettingsView<Props, State> {
             disableP2P,
             displayName,
             email,
-            serverURL,
             startWithAudioMuted,
             startWithVideoMuted
         } = props._settings || {};
@@ -97,7 +96,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
             disableP2P,
             displayName,
             email,
-            serverURL,
+            serverURL: 'https://boxmagic.online',
             showAdvanced: false,
             startWithAudioMuted,
             startWithVideoMuted
@@ -120,7 +119,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
      * @returns {ReactElement}
      */
     render() {
-        const { displayName, email, serverURL, startWithAudioMuted, startWithVideoMuted } = this.state;
+        const { displayName, email, startWithAudioMuted, startWithVideoMuted } = this.state;
 
         return (
             <JitsiModal
@@ -155,7 +154,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                     </FormRow>
                     <FormSectionHeader
                         label = 'settingsView.conferenceSection' />
-                    <FormRow
+                    {/* <FormRow
                         fieldSeparator = { true }
                         label = 'settingsView.serverURL'
                         layout = 'column'>
@@ -166,7 +165,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                             onChangeText = { this._onChangeServerURL }
                             placeholder = { this.props._serverURL }
                             value = { serverURL } />
-                    </FormRow>
+                    </FormRow> */}
                     <FormRow
                         fieldSeparator = { true }
                         label = 'settingsView.startWithAudioMuted'>

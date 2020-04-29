@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { SafeAreaView, ScrollView, Text } from 'react-native';
 
 import { Avatar } from '../../base/avatar';
-import { IconInfo, IconSettings, IconHelp } from '../../base/icons';
+import { IconInfo, IconSettings } from '../../base/icons';
 import { setActiveModalId } from '../../base/modal';
 import {
     getLocalParticipant,
@@ -25,12 +25,12 @@ import styles, { SIDEBAR_AVATAR_SIZE } from './styles';
 /**
  * The URL at which the privacy policy is available to the user.
  */
-const PRIVACY_URL = 'https://jitsi.org/meet/privacy';
+const PRIVACY_URL = 'https://boxmagic.cl/pp.pdf';
 
 /**
  * The URL at which the terms (of service/use) are available to the user.
  */
-const TERMS_URL = 'https://jitsi.org/meet/terms';
+const TERMS_URL = 'https://boxmagic.cl/tyc.pdf';
 
 type Props = {
 
@@ -109,10 +109,10 @@ class WelcomePageSideBar extends Component<Props> {
                             icon = { IconInfo }
                             label = 'welcomepage.privacy'
                             url = { PRIVACY_URL } />
-                        <SideBarItem
+                        {/* <SideBarItem
                             icon = { IconHelp }
                             label = 'welcomepage.getHelp'
-                            onPress = { this._onOpenHelpPage } />
+                            onPress = { this._onOpenHelpPage } /> */}
                     </ScrollView>
                 </SafeAreaView>
             </SlidingView>

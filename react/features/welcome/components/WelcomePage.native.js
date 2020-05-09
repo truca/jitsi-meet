@@ -3,10 +3,10 @@ import {
     Animated,
     Keyboard,
     SafeAreaView,
-    TextInput,
     TouchableHighlight,
     TouchableOpacity,
-    View
+    View,
+    Linking
 } from 'react-native';
 
 import { getName } from '../../app';
@@ -33,7 +33,7 @@ import {
     _mapStateToProps as _abstractMapStateToProps
 } from './AbstractWelcomePage';
 import LocalVideoTrackUnderlay from './LocalVideoTrackUnderlay';
-import styles, { PLACEHOLDER_TEXT_COLOR } from './styles';
+import styles from './styles';
 import VideoSwitch from './VideoSwitch';
 import WelcomePageLists from './WelcomePageLists';
 import WelcomePageSideBar from './WelcomePageSideBar';
@@ -247,8 +247,17 @@ class WelcomePage extends AbstractWelcomePage {
      *
      * @returns {ReactElement}
      */
+    _onRedirect() {
+        Linking.openURL('https://boxmagic.page.link/bm');
+    }
+
+    /**
+     * Renders the full welcome page.
+     *
+     * @returns {ReactElement}
+     */
     _renderFullUI() {
-        const roomnameAccLabel = 'welcomepage.accessibilityLabel.roomname';
+        // const roomnameAccLabel = 'welcomepage.accessibilityLabel.roomname';
         const { _headerStyles, t } = this.props;
 
         return (
@@ -264,7 +273,12 @@ class WelcomePage extends AbstractWelcomePage {
                     </Header>
                     <SafeAreaView style = { styles.roomContainer } >
                         <View style = { styles.joinControls } >
-                            <Text style = { styles.enterRoomText }>
+                            <TouchableOpacity
+                                onPress = { this._onRedirect }
+                                style = { styles.redirect } >
+                                <Text style = { styles.redirectText }>{ t('welcomepage.redirectButton') }</Text>
+                            </TouchableOpacity>
+                            {/* <Text style = { styles.enterRoomText }>
                                 { t('welcomepage.roomname') }
                             </Text>
                             <TextInput
@@ -282,7 +296,7 @@ class WelcomePage extends AbstractWelcomePage {
                                 returnKeyType = { 'go' }
                                 style = { styles.textInput }
                                 underlineColorAndroid = 'transparent'
-                                value = { this.state.room } />
+                                value = { this.state.room } /> */}
                             {
                                 this._renderHintBox()
                             }

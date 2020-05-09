@@ -271,6 +271,32 @@ export default {
     },
 
     /**
+     * Redirect button style.
+     */
+    redirect: {
+        borderColor: ColorPalette.white,
+        borderRadius: 4,
+        borderWidth: 1,
+        fontSize: 20,
+        height: 50,
+        padding: 4,
+        textAlign: 'center',
+        backgroundColor: 'white',
+        color: '#5202c4',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20
+    },
+
+    /**
+     * Redirect button text style.
+     */
+    redirectText: {
+        fontSize: 20
+    },
+
+    /**
      * Application title style.
      */
     title: {

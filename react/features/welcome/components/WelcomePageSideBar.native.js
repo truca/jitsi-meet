@@ -30,7 +30,7 @@ const PRIVACY_URL = 'https://boxmagic.cl/pp.pdf';
 /**
  * The URL at which the terms (of service/use) are available to the user.
  */
-const TERMS_URL = 'https://boxmagic.cl/tyc.pdf';
+// const TERMS_URL = 'https://boxmagic.cl/tyc.pdf';
 
 type Props = {
 
@@ -101,10 +101,10 @@ class WelcomePageSideBar extends Component<Props> {
                             icon = { IconSettings }
                             label = 'settings.title'
                             onPress = { this._onOpenSettings } />
-                        <SideBarItem
+                        {/* <SideBarItem
                             icon = { IconInfo }
                             label = 'welcomepage.terms'
-                            url = { TERMS_URL } />
+                            url = { TERMS_URL } /> */}
                         <SideBarItem
                             icon = { IconInfo }
                             label = 'welcomepage.privacy'

@@ -746,10 +746,11 @@
         "privacy": "Privacidad",
         "recentList": "Reciente",
         "recentListDelete": "Borrar",
-        "recentListEmpty": "Su lista de recientes está actualmente vacía. Chatea con tu equipo y encontrarás todas tus reuniones aquí.",
+        "redirectButton": "Ir a BoxMagic",
+        "recentListEmpty": "Para encontrar tus clase online ingresa desde la app de Boxmagic.",
         "reducedUIText": "¡Bienvenido a {{app}}!",
         "roomname": "Introduzca un nombre de sala",
-        "roomnameHint": "Introduce el nombre o URL de la sala a la que quieres unirte. Puedes crear un nombre nuevo, sólo tienes que hacer llegar este nombre al resto de participantes para que puedan unirse a esta sala.",
+        "roomnameHint": "Para encontrar tus clase online ingresa desde la app de Boxmagic.",
         "sendFeedback": "Enviar comentarios",
         "terms": "Términos",
         "title": "Seguro, lleno de funcionalidades y videoconferencias completamente gratuitas"
